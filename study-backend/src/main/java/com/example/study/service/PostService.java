@@ -16,4 +16,7 @@ public class PostService {
 	public List<PostEntity> getAllPostEntities() {
 		return pRepository.findAll();
 	}
+	public void savePost(PostEntity entity) {
+		pRepository.save(entity);
+	}
 }

@@ -11,6 +11,11 @@ public class UserEntity {
 	private String email;
 	private String nickName;
 	
+	public UserEntity() {}
+	public UserEntity(String email, String nickName) {
+		this.email = email;
+		this.nickName = nickName;
+	}
 	//Getter
 	public String getEmail() {
 		return email;
@@ -30,8 +35,8 @@ public class UserEntity {
 	@Override
 	public String toString() {
 		return "UserEntities {" + 
-				"email=" + email +
-				"nickName=" + nickName + "}";
+				" email=" + email +
+				" nickName=" + nickName + "}";
 	}
 	
 }
