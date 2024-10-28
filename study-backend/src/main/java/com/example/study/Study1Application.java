@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.study.entity.PostEntity;
 import com.example.study.entity.UserEntity;
-import com.example.study.respository.PostRepository;
-import com.example.study.respository.UserRepository;
+import com.example.study.repository.PostRepository;
+import com.example.study.repository.UserRepository;
 
 @SpringBootApplication
 public class Study1Application implements CommandLineRunner {
@@ -37,6 +37,9 @@ public class Study1Application implements CommandLineRunner {
 		for(UserEntity entity : uEntities) {
 			System.out.println(entity);
 		}
+		
+		UserEntity user = uRepository.findByEmail("11@test.com");
+		System.out.println("11 User Entities in DB:" + user);
 	}
 
 }

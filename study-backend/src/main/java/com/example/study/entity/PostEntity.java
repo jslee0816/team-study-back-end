@@ -2,51 +2,63 @@ package com.example.study.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name="postentity")
 public class PostEntity {
 	// Posts col
 	@Id
-	private Integer idx;
-	private String contents;
+	private Long postidx;
+	private String content;
 	private String title;
-	private String userName;
+	private String nickname;
+	private Long userid;
 	
-	//Getter
-	public String getContents() {
-		return contents;
+	public Long getPostidx() {
+		return postidx;
 	}
-	public Integer getIdx() {
-		return idx;
+
+	public void setPostidx(Long postidx) {
+		this.postidx = postidx;
 	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
 	public String getTitle() {
 		return title;
 	}
-	public String getUserName() {
-		return userName;
-	}
-	
-	//Setter
-	public void setContents(String contents) {
-		this.contents = contents;
-	}
-	public void setIdx(Integer idx) {
-		this.idx = idx;
-	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+
+	public String getNickname() {
+		return nickname;
 	}
-	
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public Long getUserid() {
+		return userid;
+	}
+
+	public void setUserid(Long userid) {
+		this.userid = userid;
+	}
+
 	@Override
 	public String toString() {
-		return "PostEntities {" + 
-				"contents=" + contents +
-				"idx=" + idx +
-				"title=" + title +
-				"userName=" + userName + "}";
+		return "PostEntity [postidx=" + postidx + ", content=" + content + ", title=" + title + ", nickname=" + nickname
+				+ ", userid=" + userid + "]";
 	}
-	
+
 }

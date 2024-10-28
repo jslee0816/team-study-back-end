@@ -14,6 +14,6 @@ public class PostController {
 	
 	@GetMapping("/posts")
 	public List<PostEntity> getPostEntity() {
-		return service.getAllPostEntities();
+		return service.getAllPost();
 	}
 }
