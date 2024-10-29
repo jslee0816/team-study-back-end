@@ -33,7 +33,7 @@ public class UserService {
     public UserEntity loginUser(String email, String pwd) {
         UserEntity user = userRepository.findByEmail(email);
         if (user == null || !user.getPwd().equals(pwd)) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "이메일 혹은 패스워드를 다시 확인하세요.");
+//            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "이메일 혹은 패스워드를 다시 확인하세요.");
         }
         return user;
     }
