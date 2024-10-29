@@ -14,12 +14,12 @@ import com.example.study.repository.UserRepository;
 
 @SpringBootApplication
 public class Study1Application implements CommandLineRunner {
-	
+
 	@Autowired
 	private PostRepository pRepository;
 	@Autowired
 	private UserRepository uRepository;
-	
+
 	public static void main(String[] args) {
 		SpringApplication.run(Study1Application.class, args);
 	}
@@ -37,7 +37,7 @@ public class Study1Application implements CommandLineRunner {
 		for(UserEntity entity : uEntities) {
 			System.out.println(entity);
 		}
-		
+
 		UserEntity user = uRepository.findByEmail("11@test.com");
 		System.out.println("11 User Entities in DB:" + user);
 	}
