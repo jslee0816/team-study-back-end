@@ -4,15 +4,17 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.study.entity.UserEntity;
 import com.example.study.service.UserService;
 
 @RestController
+@CrossOrigin(origins = "http://study-frontend-tl.s3-website-us-east-1.amazonaws.com")
 public class UserController {
 	@Autowired
 	private UserService service;
