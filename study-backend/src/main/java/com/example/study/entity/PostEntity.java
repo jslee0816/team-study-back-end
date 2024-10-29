@@ -1,6 +1,8 @@
 package com.example.study.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -9,6 +11,7 @@ import jakarta.persistence.Table;
 public class PostEntity {
 	// Posts col
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long postidx;
 	private String content;
 	private String title;
@@ -57,7 +60,10 @@ public class PostEntity {
 
 	@Override
 	public String toString() {
-		return "PostEntity [postidx=" + postidx + ", content=" + content + ", title=" + title + ", nickname=" + nickname
+		return "PostEntity [postidx=" + postidx + 
+				", content=" + content + 
+				", title=" + title + 
+				", nickname=" + nickname
 				+ ", userid=" + userid + "]";
 	}
 

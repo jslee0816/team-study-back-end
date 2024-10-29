@@ -28,8 +28,8 @@ public class UserService {
         user.setPwd(pwd);
         return userRepository.save(user);
     }
-
-    // 이메일로 로그인
+    
+    // 로그인
     public UserEntity loginUser(String email, String pwd) {
         UserEntity user = userRepository.findByEmail(email);
         if (user == null || !user.getPwd().equals(pwd)) {
@@ -37,4 +37,5 @@ public class UserService {
         }
         return user;
     }
+
 }
